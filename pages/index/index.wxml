@@ -1,0 +1,42 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+	<van-search input-align="center" placeholder="请输入搜索关键词" shape="round" readonly='true' bind:tap="handelSearch" />
+	<view class="page-body">
+		<view class="page-section page-section-spacing swiper">
+			<swiper class="body-pic" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+				<block wx:for="{{background}}" wx:key="*this">
+					<swiper-item>
+						<image mode="scaleToFill" src="{{item}}"></image>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+	</view>
+	<view class="new_product">
+		<view class="new_title">新品推荐</view>
+		<view class="new_product_list">
+			<block wx:for="{{new_list}}" wx:key="index">
+				<view class="new_itemBox">
+					<view class="new_itemImg">
+						<image src="{{item.imgUrl}}"></image>
+					</view>
+					<text class="new_itemTitle">{{item.title}}</text>
+					<view class="new_itemPrice">￥ <text>{{item.price}}</text></view>
+				</view>
+			</block>
+		</view>
+	</view>
+	<van-divider contentPosition="center" textColor="#cdcdcd">
+		<van-icon name="hot-o" color="#EE0A24" />猜你喜欢</van-divider>
+	<view class="like_product">
+		<block wx:for="{{like_list}}" wx:key="index">
+			<view class="like_product_list">
+				<view class="like_product_img">
+					<image src="{{item.imgUrl}}"></image>
+				</view>
+				<view class="like_product_title">{{item.title}}</view>
+				<view class="like_product_price">￥ <text>{{item.price}}</text></view>
+			</view>
+		</block>
+	</view>
+</view>

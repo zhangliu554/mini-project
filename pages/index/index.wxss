@@ -1,0 +1,122 @@
+/* pages/index/index.wxss */
+.body-pic {
+  width: 100%;
+  height: 320rpx;
+}
+
+.body-pic image {
+  width: 100%;
+  height: 100%;
+}
+
+.page-body {
+  margin-bottom: 10rpx;
+}
+
+/* 新品推荐 */
+.new_product {
+  background: #fff;
+  margin-top: 30rpx;
+}
+
+.new_title {
+  text-align: center;
+  padding: 15rpx 0;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+
+.new_product_list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.new_product_list .new_itemBox {
+  width: 22%;
+  font-size: 26rpx;
+  padding: 10rpx;
+}
+
+.new_itemImg,
+.like_product_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_itemImg {
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #eee;
+}
+
+.new_itemImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.new_itemTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  padding: 5rpx;
+  margin: 0 0 10rpx;
+}
+
+.new_itemPrice,.like_product_price {
+  color: red;
+}
+
+/* 取消滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* 猜你喜欢 */
+.like_product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+
+.like_product_list {
+  box-sizing: border-box;
+  width: 48%;
+  background: #fff;
+  margin-top: 15rpx;
+  padding: 15rpx;
+
+}
+
+.like_product_img {
+  width: 90%;
+  height: 340rpx;
+}
+
+.like_product_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.like_product_title {
+  /* width: 100%; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin:5rpx 0rpx;
+}
+.like_product_price{
+  font-weight: 600;
+  font-size: 32rpx;
+}

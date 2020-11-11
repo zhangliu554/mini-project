@@ -1,0 +1,20 @@
+<!--pages/type/type.wxml-->
+<view class="container">
+	<van-search input-align="center" placeholder="请输入搜索关键词" shape="round" readonly='true' bind:tap="handelSearch" class="type_search" />
+	<view class="type_list">
+		<van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+			<block wx:for="{{typeList}}" wx:key="index">
+				<van-sidebar-item title="{{item.title}}" />
+			</block>
+		</van-sidebar>
+		<view class="type_item">
+			<van-grid column-num="3" border="{{ false }}">
+					<van-grid-item use-slot wx:for="{{ typeItemList }}"  wx:key="index">
+						<image style="width: 80rpx; height: 80rpx;" src="{{item.imgUrl}}" />
+						<text>{{item.title}}</text>
+					</van-grid-item>
+			</van-grid>
+		</view>
+
+	</view>
+</view>

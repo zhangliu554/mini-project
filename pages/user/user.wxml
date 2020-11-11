@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="userinfo">
+		<block class='userinfo_box' wx:if="{{!hasUserInfo && canIUse}}">
+			<view class="img_box">
+				<image bindtap="bindViewTap" class="userinfo-avatar" src="../../images/touxiang.png" mode="cover"></image>
+			</view>
+			<view>
+				<text open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </text>
+			</view>
+		</block>
+		<block userinfo_box wx:else>
+			<view class="img_box">
+				<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+			</view>
+			<view>
+				<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+			</view>
+		</block>
+	</view>
+	<view class="order_box">
+		<view>
+			<van-cell value="全部订单" is-link url="/pages/user/order/order">
+				<view slot="title">
+					<view class="van-cell-text">我的订单</view>
+				</view>
+			</van-cell>
+		</view>
+		<view class="order_list">
+			<view>
+				<van-icon name="description" size="50rpx" />
+				<text>全部订单</text>
+			</view>
+			<view>
+				<van-icon name="paid" size="50rpx" />
+				<text>待付款</text>
+			</view>
+			<view>
+				<van-icon name="logistics" size="50rpx" />
+				<text>代收货</text>
+			</view>
+			<view>
+				<van-icon name="flower-o" size="50rpx" />
+				<text>待评价</text>
+			</view>
+		</view>
+	</view>
+	<view>
+		<van-cell icon="location-o" is-link >
+			<view slot="title">
+				<view class="van-cell-text">收货地址</view>
+			</view>
+		</van-cell>
+		<view class="line"></view>
+		<van-cell icon="question-o" is-link>
+			<view slot="title">
+				<view class="van-cell-text">我的帮助</view>
+			</view>
+		</van-cell>
+	</view>
+</view>

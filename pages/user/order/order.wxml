@@ -1,0 +1,68 @@
+<!--pages/user/order/order.wxml-->
+<view class="container">
+	<view class="myorder_title">
+		<van-tabs active="{{ active }}" bind:change="onChange" color="#ffffff" title-active-color="#66CCFF">
+			<van-tab title="全部订单">
+				<view class="myorder_list" class="product_list">
+					<view wx:if="{{list.length>0}}">
+						<block wx:for="{{list}}" wx:key="index">
+							<van-card num="{{item.num}}" price="{{item.price}}" desc="{{item.desc}}" title="{{item.title}}" thumb="{{ item.imgurl }}" class="product_item">
+								<view slot="footer">
+									<van-button plain hairline size="small">查看物流</van-button>
+									<van-button plain hairline size="small">确认收货</van-button>
+								</view>
+							</van-card>
+						</block>
+					</view>
+					<van-empty description="亲，您还没有订单信息哦！" wx:else />
+				</view>
+			</van-tab>
+			<van-tab title="待付款">
+				<view class="myorder_list" class="product_list">
+					<view wx:if="{{list.length>0}}">
+						<block wx:for="{{list}}" wx:key="index">
+							<van-card num="{{item.num}}" price="{{item.price}}" desc="{{item.desc}}" title="{{item.title}}" thumb="{{ item.imgurl }}" class="product_item">
+								<view slot="footer">
+									<van-button plain hairline size="small">查看物流</van-button>
+									<van-button plain hairline size="small">确认收货</van-button>
+								</view>
+							</van-card>
+						</block>
+					</view>
+					<van-empty description="亲，您还没有订单信息哦！" wx:else />
+				</view>
+			</van-tab>
+			<van-tab title="代发货">
+				<view class="myorder_list" class="product_list">
+					<view wx:if="{{list.length>0}}">
+						<block wx:for="{{list}}" wx:key="index">
+							<van-card num="{{item.num}}" price="{{item.price}}" desc="{{item.desc}}" title="{{item.title}}" thumb="{{ item.imgurl }}" class="product_item">
+								<view slot="footer">
+									<van-button plain hairline size="small">查看物流</van-button>
+									<van-button plain hairline size="small">确认收货</van-button>
+								</view>
+							</van-card>
+						</block>
+					</view>
+					<van-empty description="亲，您还没有订单信息哦！" wx:else />
+				</view>
+			</van-tab>
+			<van-tab title="代发货">
+				<view class="myorder_list" class="product_list">
+					<view wx:if="{{list.length>0}}">
+						<block wx:for="{{list}}" wx:key="index">
+							<van-card num="{{item.num}}" price="{{item.price}}" desc="{{item.desc}}" title="{{item.title}}" thumb="{{ item.imgurl }}" class="product_item">
+								<view slot="footer">
+									<van-button plain hairline size="small">查看物流</van-button>
+									<van-button plain hairline size="small">确认收货</van-button>
+								</view>
+							</van-card>
+						</block>
+					</view>
+					<van-empty description="亲，您还没有订单信息哦！" wx:else />
+				</view>
+			</van-tab>
+		</van-tabs>
+	</view>
+
+</view>

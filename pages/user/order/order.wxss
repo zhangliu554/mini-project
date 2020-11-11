@@ -1,0 +1,8 @@
+/* pages/user/order/order.wxss */
+.van-card {
+  margin-bottom: 15rpx;
+}
+
+.van-button {
+  margin: 10rpx 10rpx;
+}

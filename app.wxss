@@ -1,0 +1,11 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+page {
+  background: #F7F7F7;
+  height: 100%
+}
